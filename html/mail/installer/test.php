@@ -1,5 +1,4 @@
 <form action="index.php?_step=3" method="post">
-#######
 
 <h3>Check config files</h3>
 <?php
