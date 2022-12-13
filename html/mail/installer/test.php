@@ -234,8 +234,10 @@ if ($RCI->getprop('smtp_server')) {
     $pass = $pass_field->show();
   }
   
-  echo "User: $user<br />";
-  echo "Password: $pass<br />";
+  echo "User: $user";
+  echo html::tag('br');
+  echo "Password: $pass";
+  echo "<br />";
 }
 
 $from_field = new html_inputfield(array('name' => '_from', 'id' => 'sendmailfrom'));
