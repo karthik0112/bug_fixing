@@ -19,7 +19,8 @@ if (isset($_POST['search_pattern'])) {
 if (!$quietmode) {
 	?>
 	<br /><br />
-	<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" name="exten_search">
+	<!--<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" name="exten_search">-->
+            <form method="post" name="exten_serch" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 		<input type="hidden" name="display" value="<?php echo $dispnum ?>">
 		<input type="hidden" name="type" value="<?php echo $type ?>">
 		<table>
