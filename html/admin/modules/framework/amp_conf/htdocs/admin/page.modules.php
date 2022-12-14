@@ -122,7 +122,8 @@ if (!$quietmode) {
 							}
     					$.ajax({
       					type: 'POST',
-      					url: "<?php echo $_SERVER["PHP_SELF"]; ?>",
+      					//url: "<?php echo $_SERVER["PHP_SELF"]; ?>",
+                                        url:"<?php echo htmlspecialchars($_SERVER["PHP_SELF"];) ?>",
       					data: "quietmode=1&skip_astman=1&display=modules&update_email=" + update_email,
       					dataType: 'json',
       					success: function(data) {
