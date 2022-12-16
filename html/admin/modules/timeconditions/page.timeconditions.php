@@ -62,7 +62,8 @@ if ($action == 'delete') {
 		$tlabel = sprintf(_("Delete Time Condition: %s"),trim($thisItem['displayname']) == '' ? $code : $thisItem['displayname']." ($code) ");
 		$label = '<span><img width="16" height="16" border="0" title="'.$tlabel.'" alt="" src="images/core_delete.png"/>&nbsp;'.$tlabel.'</span>';
 ?>
-		<a href="<?php echo $delURL ?>"><?php echo $label; ?></a><br />
+<!--<a href="<?php echo $delURL ?>"><?php echo $label; ?></a><br />-->
+                <?php echo '<a href="' . $grpURL . '">' . $label . '&nbsp;</a>'; ?>
 <?php
 		$usage_list = framework_display_destination_usage(timeconditions_getdest($itemid));
 		if (!empty($usage_list)) {
